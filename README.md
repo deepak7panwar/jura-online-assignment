@@ -1,5 +1,5 @@
 # jura-online-assignment
-jura online rest api assignment
+- Jura online rest api assignment
 
 * For adding values to database i have added code to add data at the startup of the the application
 
@@ -8,7 +8,7 @@ jura online rest api assignment
 * API endpoint http://<ip>:3000/api/v1/courseOutline
 http verb get()
 
-Environment variables used in assignmet for database connection
+- Environment variables used in assignmet for database connection
 - linux
 ```sh
  export DB_HOST=<hostname>
