@@ -3,6 +3,7 @@
 
 * For adding values to database i have added code to add data at the startup of the the application
 
+
 * Used Mysql for database
 
 * API endpoint http://<ip>:3000/api/v1/courseOutline
