@@ -6,16 +6,16 @@ jura online rest api assignment
 # Used Mysql for database
 
 # API endpoint http://<ip>:3000/api/v1/courseOutline
-# http verb get()
+http verb get()
 
-# Environment variables used in assignmet for database connection
-# linux
+Environment variables used in assignmet for database connection
+linux
   export DB_HOST=<hostname>
   export DB_PORT=<port>
   export DB_USERNAME=<username>
   export DB_PASSWORD=<password>
   export DB_DATABASE=<database name>
-# windows
+windows
   set DB_HOST=<hostname>
   set DB_PORT=<port>
   set DB_USERNAME=<username>
