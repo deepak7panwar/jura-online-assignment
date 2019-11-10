@@ -8,7 +8,7 @@
 * API endpoint http://<ip>:3000/api/v1/courseOutline
 http verb get()
 
-- step1: Set following Environment variables used for database connection
+- Step1: Set following Environment variables used for database connection
 - linux
 ```sh
  export DB_HOST=<hostname>
@@ -26,7 +26,7 @@ http verb get()
  set DB_DATABASE=<database name>
  ```
  
- *  step 2: For starting node server run in terminal
+ *  Step 2: For starting node server run in terminal
  ```sh
  npm start
   ```
