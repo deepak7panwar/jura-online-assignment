@@ -26,7 +26,7 @@ http verb get()
  set DB_DATABASE=<database name>
  ```
  
- *  Step 2: For starting node server run in terminal
+ *  Step 2: For starting node server run given command in terminal
  ```sh
  npm start
   ```
