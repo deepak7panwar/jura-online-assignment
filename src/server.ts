@@ -1,5 +1,5 @@
 import * as http from "http";
-import App from "./App";
+import app from "./app";
 import { LoggerUtil } from "./common/logger";
 import { ErrorDecisionMaker } from "./utils/errors/error-decision-maker";
 
@@ -65,7 +65,7 @@ const sigtermErrorHandler = async () => {
     LoggerUtil.info("Starting graceful shutdown");
     // health.shuttingDown();
     let exitCode = 0;
-    // const shutdown = [App.closeServer(), db.closeDatabase()];
+    // const shutdown = [app.closeServer(), db.closeDatabase()];
     const shutdown = [server.close()];
     for (const s of shutdown) {
         try {
@@ -79,9 +79,9 @@ const sigtermErrorHandler = async () => {
 };
 const errorDecisionMaker: ErrorDecisionMaker = new ErrorDecisionMaker();
 const port = normalizePort(process.env.PORT || 3000);
-App.set("port", port);
+app.set("port", port);
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-const server = http.createServer(App);
+const server = http.createServer(app);
 server.listen(port);
 server.on("error", onError);
 server.on("listening", onListening);
