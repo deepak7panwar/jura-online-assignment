@@ -19,18 +19,10 @@ const options = {
 
 export let logger: Logger = createLogger({
   transports: [
-    //
-    // - Write to all logs with level `info` and below to `combined.log`
-    // - Write all logs error (and below) to `error.log`.
-    //
     new transports.Console(options.console),
   ],
 });
 
-//
-// If we're not in production then log to the `console` with the format:
-// `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
-//
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
     new transports.Console({
@@ -43,7 +35,6 @@ if (process.env.NODE_ENV !== 'production') {
   );
 }
 
-// create a stream object  that will be used by `morgan`
 export let streams: StreamOptions = {
   write: (message: any): void => {
     logger.info(message);
